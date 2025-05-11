@@ -1,0 +1,44 @@
+"use client"
+
+import { motion } from "framer-motion"
+
+export function CTASection() {
+  return (
+    <section className="py-24 bg-black">
+      <div className="container mx-auto px-6 text-center">
+        <motion.h2
+          className="text-3xl sm:text-4xl font-bold mb-4 text-white"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Ready to Transform Your Retail Business?
+        </motion.h2>
+        <motion.p
+          className="text-lg text-gray-200 max-w-3xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Join thousands of retailers who are streamlining their supply chain with GATICIAN.
+        </motion.p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.button
+            className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 text-lg font-bold rounded-full transition-colors duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started for Free
+          </motion.button>
+          <motion.button
+            className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400/10 px-8 py-3 text-lg font-bold rounded-full transition-colors duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Schedule a Demo
+          </motion.button>
+        </div>
+      </div>
+    </section>
+  )
+}
