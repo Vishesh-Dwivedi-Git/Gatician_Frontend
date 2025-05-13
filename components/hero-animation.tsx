@@ -40,7 +40,7 @@ export default function HeroAnimation() {
       />
 
       <motion.div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-yellow-400 rounded-xl"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-yellow-600 rounded-xl"
         animate={{
           rotate: [0, 45, 0, -45, 0],
           scale: [1, 1.2, 1, 0.8, 1],
@@ -53,7 +53,7 @@ export default function HeroAnimation() {
       />
 
       <motion.div
-        className="absolute bottom-10 left-20 w-24 h-24 bg-yellow-600 rounded-lg"
+        className="absolute bottom-10 left-20 w-24 h-24 bg-yellow-400 rounded-lg"
         animate={{
           x: [0, 50, 100, 50, 0],
           rotate: [0, -90, -180, -270, -360],
@@ -66,7 +66,7 @@ export default function HeroAnimation() {
       />
 
       <motion.div
-        className="absolute top-20 right-10 w-28 h-28 bg-yellow-200 rounded-full opacity-70"
+        className="absolute top-20 right-10 w-28 h-28 bg-yellow-400 rounded-full opacity-70"
         animate={{
           scale: [1, 1.5, 1, 0.5, 1],
           opacity: [0.7, 0.3, 0.7, 0.3, 0.7],
@@ -91,7 +91,7 @@ export default function HeroAnimation() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

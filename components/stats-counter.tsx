@@ -11,7 +11,7 @@ interface StatsCounterProps {
 
 export default function StatsCounter({ end, suffix = "", label }: StatsCounterProps) {
   const [count, setCount] = useState(0)
-  const ref = useRef<null | Element>(null)
+  const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true })
 
   useEffect(() => {

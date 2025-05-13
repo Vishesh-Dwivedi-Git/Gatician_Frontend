@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { ArrowRight, Package, BarChart3, Users, Globe, CheckCircle } from "lucide-react"
+import { ArrowRight, Package, BarChart3, Users, Globe, CheckCircle, Activity, ArrowUp, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import HeroAnimation from "@/components/hero-animation"
 import FeatureCard from "@/components/feature-card"
@@ -16,100 +16,106 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Package className="h-8 w-8 text-yellow-500" />
-            <span className="text-xl font-bold text-white">GATICIAN</span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link
-              href="#features"
-              className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-            >
-              Features
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-            >
-              How It Works
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-            >
-              Testimonials
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/login"
-              className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors hidden sm:inline-flex"
-            >
-              Log in
-            </Link>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">Get Started</Button>
-          </div>
-        </div>
-      </header>
+  <div className="container flex h-16 items-center justify-between px-4 mx-auto">
+    <div className="flex items-center gap-2">
+      <Package className="h-6 w-6 text-yellow-500" />
+      <span className="text-2xl font-light tracking-tight text-white">GATICIAN</span>
+    </div>
+    <nav className="hidden md:flex gap-8">
+      <Link
+        href="#features"
+        className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors"
+      >
+        Features
+      </Link>
+      <Link
+        href="#how-it-works"
+        className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors"
+      >
+        How It Works
+      </Link>
+      <Link
+        href="#testimonials"
+        className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors"
+      >
+        Testimonials
+      </Link>
+      <Link
+        href="#contact"
+        className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors"
+      >
+        Contact
+      </Link>
+    </nav>
+    <div className="flex items-center gap-4">
+      <Link
+        href="/login"
+        className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors hidden sm:inline-flex"
+      >
+        Log in
+      </Link>
+      <Button className="bg-yellow-500 hover:bg-yellow-600 text-black text-base font-normal px-4 py-2 rounded-none">
+        Get Started
+      </Button>
+    </div>
+  </div>
+</header>
 
       <main className="flex-1">
-         <section className="relative overflow-hidden bg-black text-white">
-      <div className="container relative z-10 mx-auto px-6 py-24 sm:px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-32">
-        <motion.div
-          className="max-w-2xl lg:max-w-lg lg:flex-shrink-0 lg:pt-8"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
-            <span className="block text-yellow-400">Streamline</span> Your Retail Supply Chain
-          </h1>
-          <motion.p
-            className="mt-6 text-lg leading-8 text-gray-200"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+        {/* Hero Section */}
+        <section className="bg-black">
+      <div className="container mx-auto px-4 py-24">
+        <div className="flex flex-col md:flex-row items-center justify-around ">
+          <motion.div
+            className="flex-1 max-w-lg"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            Monitor your ONDC orders, track deliveries, and manage your retail business with GATICIAN's powerful supply chain management platform.
-          </motion.p>
-          <div className="mt-10 flex items-center gap-x-6">
-            <motion.button
-              className="bg-yellow-500 hover:bg-yellow-600 text-black text-lg font-bold px-8 py-3 rounded-full flex items-center transition-colors duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <h1 className="text-7xl font-bold tracking-tight mb-4 text-white">
+              <span className="text-yellow-400">/</span> Streamline Retail
+            </h1>
+            <motion.p
+              className="text-xl text-gray-400 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Start Tracking
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </motion.button>
-            <motion.div
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link
-                href="#demo"
-                className="text-sm font-semibold leading-6 text-gray-200 hover:text-yellow-400 transition-colors"
+              Monitor ONDC orders and manage your supply chain
+            </motion.p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.button
+                className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 text-base font-normal rounded-full flex items-center justify-center transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Watch demo <span aria-hidden="true">→</span>
-              </Link>
-            </motion.div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="mt-16 sm:mt-24 lg:mt-0 lg:flex-1"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <HeroAnimation />
-        </motion.div>
+                Start Now
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </motion.button>
+              <motion.div
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link
+                  href="#demo"
+                  className="text-base font-normal text-gray-400 hover:text-yellow-500 transition-colors"
+                >
+                  Watch Demo
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+          <motion.div
+            className="flex-1 "
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <HeroAnimation />
+          </motion.div>
+        </div>
       </div>
-      <div className="absolute inset-0 bg-grid-white/2 bg-[size:100px_100px] opacity-20" />
     </section>
-
         {/* Stats Section */}
 <section className="bg-black py-16">
   <div className="container mx-auto px-4">
@@ -139,8 +145,8 @@ export default function Home() {
 <section id="features" className="py-24 bg-black">
   <div className="container mx-auto px-4">
     <div className="text-center mb-20">
-      <h2 className="text-4xl font-light tracking-tight mb-4 text-white">
-        <span className="text-yellow-400">/</span> Retailer Tools
+      <h2 className="text-4xl font-semibold tracking-tight mb-4 text-white">
+        <span className=" text-yellow-400">/</span> Retailer Tools
       </h2>
       <p className="text-lg text-gray-400 max-w-2xl mx-auto">
         Precision instrumentation for ONDC commerce
@@ -228,191 +234,123 @@ export default function Home() {
 />
 
         {/* How It Works */}
-    <section id="how-it-works" className="py-24 bg-black text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">How GATICIAN Works</h2>
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-            Our platform makes it easy to manage your retail supply chain from end to end.
+   <section id="how-it-works" className="py-24 bg-black">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold tracking-tight mb-4 text-white">
+            <span className="text-yellow-400">/</span> How GATICIAN Works
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Streamlined tools to manage your retail supply chain
           </p>
         </div>
+        
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1">
-            <WorldMapAnimation />
+        <div className="grid md:grid-cols-2 gap-12 relative">
+          {/* Vertical Separator */}
+          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-px bg-gray-600/50"></div>
+
+          {/* Step 1 */}
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <Globe className="h-8 w-8 text-yellow-500" />
+            </div>
+            <h3 className="text-xl font-normal text-white mb-2">Connect ONDC</h3>
+            <p className="text-gray-400 px-4">
+              Seamlessly link your ONDC seller account
+            </p>
           </div>
-          <div className="space-y-8 order-1 md:order-2">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500 text-black font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Connect Your ONDC Account</h3>
-                <p className="text-gray-200">
-                  Link your ONDC seller account to GATICIAN with our simple integration process.
-                </p>
-              </div>
+
+          {/* Step 2 */}
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <Activity className="h-8 w-8 text-yellow-500" />
             </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500 text-black font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Monitor Orders in Real-time</h3>
-                <p className="text-gray-200">
-                  Get instant updates on all your orders, from placement to delivery.
-                </p>
-              </div>
+            <h3 className="text-xl font-normal text-white mb-2">Monitor Orders</h3>
+            <p className="text-gray-400 px-4">
+              Track orders in real-time from placement to delivery
+            </p>
+          </div>
+
+          {/* Horizontal Separator */}
+          <div className="md:col-span-2 h-px bg-gray-600/50 w-3/4 mx-auto"></div>
+
+          {/* Step 3 */}
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <BarChart3 className="h-8 w-8 text-yellow-500" />
             </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500 text-black font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Analyze Performance</h3>
-                <p className="text-gray-200">
-                  Use our analytics tools to identify trends and optimize your supply chain.
-                </p>
-              </div>
+            <h3 className="text-xl font-normal text-white mb-2">Analyze Trends</h3>
+            <p className="text-gray-400 px-4">
+              Use analytics to optimize your supply chain
+            </p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <ArrowUp className="h-8 w-8 text-yellow-500" />
             </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500 text-black font-bold">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Scale Your Business</h3>
-                <p className="text-gray-200">
-                  Leverage insights to grow your retail business and expand your reach.
-                </p>
-              </div>
-            </div>
+            <h3 className="text-xl font-normal text-white mb-2">Scale Business</h3>
+            <p className="text-gray-400 px-4">
+              Grow with insights and expanded reach
+            </p>
           </div>
         </div>
       </div>
     </section>
 
         {/* Testimonials */}
-      <section id="testimonials" className="py-24 bg-black relative">
-      <div className="absolute inset-0 bg-grid-white/2 bg-[size:100px_100px] opacity-10"></div>
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">What Our Customers Say</h2>
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-            Hear from retailers who have transformed their businesses with GATICIAN.
-          </p>
+    <section id="testimonials" className="py-24 bg-black">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-20">
+      <h2 className="text-4xl font-semibold tracking-tight mb-4 text-white">
+        <span className="text-yellow-400">/</span> Customer Stories
+      </h2>
+      <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+        Retailers thriving with GATICIAN
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-12">
+      {/* Testimonial 1 */}
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <User className="h-8 w-8 text-yellow-500" />
         </div>
-
-        <div className="grid md:grid-cols-3 gap-12">
-          <motion.div
-            className="relative"
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold">
-                RS
-              </div>
-              <div className="ml-4">
-                <h3 className="font-bold text-white">Rahul Sharma</h3>
-                <p className="text-sm text-gray-200">Fashion Retailer</p>
-              </div>
-            </div>
-            <p className="text-white text-base leading-relaxed">
-              "GATICIAN has completely transformed how we manage our orders. The real-time tracking and analytics have helped us reduce delivery times by 30%."
-            </p>
-            <div className="mt-4 flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ))}
-            </div>
-            <div className="absolute bottom-0 left-0 w-16 h-1 bg-yellow-400/50 rounded-full"></div>
-          </motion.div>
-
-          <motion.div
-            className="relative"
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold">
-                AP
-              </div>
-              <div className="ml-4">
-                <h3 className="font-bold text-white">Ananya Patel</h3>
-                <p className="text-sm text-gray-200">Electronics Store Owner</p>
-              </div>
-            </div>
-            <p className="text-white text-base leading-relaxed">
-              "The customer insights feature has been a game-changer for our business. We've been able to tailor our inventory based on actual demand patterns."
-            </p>
-            <div className="mt-4 flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ))}
-            </div>
-            <div className="absolute bottom-0 left-0 w-16 h-1 bg-yellow-400/50 rounded-full"></div>
-          </motion.div>
-
-          <motion.div
-            className="relative"
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold">
-                VK
-              </div>
-              <div className="ml-4">
-                <h3 className="font-bold text-white">Vikram Kumar</h3>
-                <p className="text-sm text-gray-200">Grocery Chain Manager</p>
-              </div>
-            </div>
-            <p className="text-white text-base leading-relaxed">
-              "Since implementing GATICIAN, we've reduced inventory costs by 25% while improving customer satisfaction. The ONDC integration is seamless."
-            </p>
-            <div className="mt-4 flex text-yellow-400">
-              {[...Array(4)].map((_, i) => (
-                <svg
-                  key={i}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ))}
-            </div>
-            <div className="absolute bottom-0 left-0 w-16 h-1 bg-yellow-400/50 rounded-full"></div>
-          </motion.div>
-        </div>
+        <h3 className="text-xl font-normal text-white mb-2">Rahul Sharma</h3>
+        <p className="text-gray-400 mb-4">Fashion Retailer</p>
+        <p className="text-gray-400 px-4">
+          "Real-time tracking cut delivery times by 30%."
+        </p>
       </div>
-    </section>
+
+      {/* Testimonial 2 */}
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <User className="h-8 w-8 text-yellow-500" />
+        </div>
+        <h3 className="text-xl font-normal text-white mb-2">Ananya Patel</h3>
+        <p className="text-gray-400 mb-4">Electronics Store Owner</p>
+        <p className="text-gray-400 px-4">
+          "Customer insights tailored our inventory to demand."
+        </p>
+      </div>
+
+      {/* Testimonial 3 */}
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <User className="h-8 w-8 text-yellow-500" />
+        </div>
+        <h3 className="text-xl font-normal text-white mb-2">Vikram Kumar</h3>
+        <p className="text-gray-400 mb-4">Grocery Chain Manager</p>
+        <p className="text-gray-400 px-4">
+          "Reduced inventory costs by 25% with seamless ONDC integration."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* CTA Section */}
         <CTASection />
