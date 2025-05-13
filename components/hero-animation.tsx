@@ -117,7 +117,7 @@ export default function HeroAnimation() {
             Powerful Supply Chain Analytics
           </motion.h3>
           <motion.p
-            className="text-gray-300 max-w-xs mx-auto"
+            className="text-gray-100 max-w-xs mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.4 }}
