@@ -20,8 +20,8 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/gatician.git
-   cd gatician
+   git clone https://github.com/Vishesh-Dwivedi-Git/Gatician_Frontend.git
+   cd Gatician_Frontend
    ```
 
 2. Install dependencies:
@@ -64,21 +64,6 @@ pnpm test
 ## 📁 Project Structure
 
 ```
-gatician/
-├── public/            # Static files
-├── src/
-│   ├── components/    # React components
-│   ├── pages/         # Next.js pages
-│   ├── styles/        # CSS/SCSS styles
-│   ├── utils/         # Utility functions
-│   └── ...
-├── .eslintrc.json     # ESLint configuration
-├── .gitignore         # Git ignore rules
-├── next.config.js     # Next.js configuration
-├── package.json       # Project dependencies and scripts
-├── pnpm-lock.yaml     # pnpm lock file
-├── README.md          # Project documentation
-└── tsconfig.json      # TypeScript configuration
 ```
 
 ## 🔧 Environment Variables
@@ -112,6 +97,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Your Name - [your-email@example.com](mailto:your-email@example.com)
+Your Name - [visheshdwivedi225544@gmail.com](mailto:visheshdwivedi225544@gmail.com)
 
-Project Link: [https://github.com/yourusername/gatician](https://github.com/yourusername/gatician)
+Project Link: https://gatician-frontend.vercel.app
