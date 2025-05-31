@@ -52,7 +52,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Sidebar for desktop */}
       <aside className="hidden md:flex flex-col w-64 bg-gray-950 border-r border-gray-800 fixed inset-y-0">
         <div className="p-4 border-b border-gray-800 flex items-center gap-2">
-          <Package className="h-6 w-6 text-yellow-400" />
+          <Package className="h-8 w-6 text-yellow-400" />
           <span className="font-bold text-lg">GATICIAN</span>
         </div>
         <nav className="flex-1 p-4 space-y-2">
@@ -162,7 +162,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800 cursor-pointer">
                   <User className="mr-2 h-4 w-4" />
-                  <span>Profile</span>
+                  <Link href="/dashboard/profile">Profile</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800 cursor-pointer">
                   <Settings className="mr-2 h-4 w-4" />
