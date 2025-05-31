@@ -55,9 +55,9 @@ export default function Navbar() {
           >
             Log in
           </Link>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-black text-base font-normal px-4 py-2 rounded-none">
+          <Link href="/auth" className="bg-yellow-500 hover:bg-yellow-600 text-black text-base font-normal px-4 py-2 rounded-none">
             Get Started
-          </Button>
+          </Link>
           {/* Hamburger Menu Button (Visible on Mobile) */}
           <button
             className="md:hidden text-gray-400 hover:text-yellow-500 focus:outline-none"

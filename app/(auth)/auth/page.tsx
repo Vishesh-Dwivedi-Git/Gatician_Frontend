@@ -11,7 +11,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Eye, EyeOff, Package } from "lucide-react"
+import { Eye, EyeOff, Package ,HomeIcon} from "lucide-react"
+import Home from "@/app/page"
 
 // Validation schemas
 const signInSchema = z.object({
@@ -107,18 +108,12 @@ export default function AuthPage() {
           <span className="text-xl font-bold">GATICIAN</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-            Features
-          </Link>
-          <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-            How It Works
-          </Link>
-          <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-            Testimonials
-          </Link>
-          <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-            Contact
-          </Link>
+          <Link href="/" className="flex items-center text-gray-300 transition-colors hover:text-yellow-500">
+  <HomeIcon className="h-5 w-5 mr-1" />
+  Home
+</Link>
+
+         
         </nav>
       </header>
 
